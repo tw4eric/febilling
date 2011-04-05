@@ -20,3 +20,5 @@ test/stringtest
 Testing/
 test/gmon.out
 coverage/
+test/*test
+test/*Test
