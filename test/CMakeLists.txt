@@ -18,7 +18,7 @@ endforeach()
 
 foreach(testfile ${TEST_FILES_CC})
     GET_FILENAME_COMPONENT(testname ${testfile} NAME_WE)
-    add_executable(${testname} ${testname}.cpp)
+    add_executable(${testname} ${testname}.cc)
     target_link_libraries(${testname} ${SRC_OBJ} ${GOOGLEMOCK_LIBRARIES} gmock pthread)
     add_test(${testname} ${testname})
 endforeach()
