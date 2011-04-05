@@ -6,10 +6,10 @@ find_package(GMock REQUIRED)
 include_directories(${GMOCK_INC})
 include_directories(${GTEST_INCLUDE_DIRS})
 
-file(GLOB_RECURSE TEST_FILES "*.cpp" "*.cc") 
+file(GLOB_RECURSE TEST_FILES "*test.cpp" "test.cc" "*Test.cpp" "*Test.cc") 
 
-foreach(testname factorialtest factorialtest2 numequalitytest rationaltest
-stringtest RatePlanLookupTest)
+foreach(testfile ${TEST_FILES})
+    GET_FILENAME_COMPONENT(testname ${testfile} NAME_WE)
     add_executable(${testname} ${testname}.cpp)
     target_link_libraries(${testname} ${SRC_OBJ} ${GOOGLEMOCK_LIBRARIES} gmock
         pthread)
