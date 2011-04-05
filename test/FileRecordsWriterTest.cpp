@@ -14,7 +14,7 @@ TEST(FileRecordsWriter, fileProvidedIsNotValid) {
 
 TEST(FileRecordsWriter, fileProvidedIsValid) {
 	
-	EXPECT_NO_THROW({FileRecordsWriter recordWriter = FileRecordsWriter(string("MakeFile"));});	 
+	EXPECT_NO_THROW({FileRecordsWriter recordWriter = FileRecordsWriter(string("testData/test.txt"));});	 
 	//delete recordWriter;
 };
 
