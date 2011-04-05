@@ -13,8 +13,9 @@ TEST(FileRecordsWriter, fileProvidedIsNotValid) {
 
 TEST(FileRecordsWriter, fileProvidedIsValid) {
 	
-	ASSERT_NO_THROW({RecordsWriter* recordWriter = new FileRecordsWriter(string("/home/euxyabd/test123/test.txt"));});	    
+	ASSERT_NO_THROW({RecordsWriter* recordWriter = new FileRecordsWriter(string("MakeFile"));});	    
 };
+
 
 #include "dummymain.h"
 
