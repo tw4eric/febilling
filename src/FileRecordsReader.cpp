@@ -10,7 +10,11 @@ FileRecordsReader::FileRecordsReader( string fileName , int noOfCol ) throw ( ex
 	{
 		throw exception();
 	}
-}
+	if(noOfCol < 0)
+	{
+		throw exception();
+	}
+}	
 FileRecordsReader::~FileRecordsReader()
 {
 	if(myStream.is_open())
@@ -18,5 +22,17 @@ FileRecordsReader::~FileRecordsReader()
 		myStream.close();
 	}
 
+}
+vector<string> FileRecordsReader::getRecords()
+{
+	vector <string > myRecords;
+
+	 if (myStream) {
+                std::string s;
+                while (getline(myStream, s))
+                      myRecords.push_back(s);
+        }
+
+	return myRecords;	
 }
 
