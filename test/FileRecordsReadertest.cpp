@@ -25,6 +25,16 @@ TEST( FileReaderConstructor , isGetRecordsWorking ){
 	
 	
 }
+TEST( FileReaderConstructor , isSplittingTheRecords ){
+
+        FileRecordsReader myFileReader("sample2.txt",3);
+        vector< vector <string > > recVector = myFileReader.getRecords();
+
+        ASSERT_STREQ((recVector[0])[1].c_str() , "teja1");
+
+
+
+}
 
 
 
