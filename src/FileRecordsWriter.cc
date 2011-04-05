@@ -9,7 +9,7 @@
 using namespace std;
 
 FileRecordsWriter::FileRecordsWriter(string fileName) throw(string)
-{
+{	
 	myFileToCreate = fileName;
 	ofstream myfile;	
 	myfile.open (myFileToCreate.c_str(), ios::out);
@@ -25,6 +25,32 @@ FileRecordsWriter::FileRecordsWriter(string fileName) throw(string)
 }
 
 bool FileRecordsWriter::WriteRecords(vector< vector< string> > recordCollection)
-{
-	return false;
+{	
+	ofstream myfile;	
+	myfile.open (myFileToCreate.c_str(), ios::out);
+	string str;	
+	if(myfile.is_open())
+	{
+		cout<<"File is opened"<<endl;
+		for(int ii = 0; ii < recordCollection.size(); ii++)
+		{
+			str = "";
+			for(int jj = 0; jj < recordCollection.size(); jj++)
+			{
+				str += recordCollection[ii][jj];
+				str +=",";
+			}
+			
+			str.resize(str.length() - 1);
+			myfile << str;
+			myfile << endl;
+		}
+
+	myfile.close();
+	return true;
+	}
+	else
+	{	
+		return false;
+	}
 }

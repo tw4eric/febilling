@@ -15,7 +15,7 @@ class FileRecordsWriter : public RecordsWriter
 		bool WriteRecords(std::vector< std::vector< std::string > > recordCollection);
 
 	private:
-		std::string myFileToCreate;
+		std::string myFileToCreate;		
 };
 
 #endif // _FILERECORDSWRITER_H_
