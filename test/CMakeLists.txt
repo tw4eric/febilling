@@ -8,7 +8,8 @@ include_directories(${GTEST_INCLUDE_DIRS})
 
 file(GLOB_RECURSE TEST_FILES "*.cpp" "*.cc") 
 
-foreach(testname factorialtest factorialtest2 numequalitytest rationaltest stringtest)
+foreach(testname factorialtest factorialtest2 numequalitytest rationaltest
+stringtest RatePlanLookupTest)
     add_executable(${testname} ${testname}.cpp)
     target_link_libraries(${testname} ${SRC_OBJ} ${GOOGLEMOCK_LIBRARIES} gmock
         pthread)
