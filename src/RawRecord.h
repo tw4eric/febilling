@@ -1,12 +1,12 @@
 #ifndef _RAW_RECORD__
 #define _RAW_RECORD_
 #include <string>
-
-struct RawRecord
+using namespace std;
+typedef struct RawRecord
 {
-    String phoneNum;
-    String callID;
-    String startTime;
-    String endTime;
-}
+    string phoneNum;
+    string callID;
+    string startTime;
+    string endTime;
+} RawRecord;
 #endif 

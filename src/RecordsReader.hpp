@@ -1,21 +1,18 @@
 //JOB: reads records
 //
-#include <vector>
-#include "RawRecord.h"
 #ifndef _RECORD_READER_
 #define _RECORD_READER_
 
-class RecordReader {
+#include <vector>
+#include "RawRecord.h"
+class RecordsReader {
 	public:
-		RecordReader();
+		RecordsReader(){}
+		virtual ~RecordsReader() {}
 		virtual vector<RawRecord> getRecords() = 0;	
 	protected:
-		virtual ~RecordReader();
-		virtual getRecord()=0;
-		virtual storeRecord( RawRecord aRecord ) = 0;
-		vector<RawRecord>  collectionOfRecords;
-		
-
-};
+		virtual  bool getRecord()=0;
+}
+;
 #endif 
 
