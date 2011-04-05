@@ -23,16 +23,23 @@ FileRecordsReader::~FileRecordsReader()
 	}
 
 }
-vector<string> FileRecordsReader::getRecords()
+vector<vector <string> > FileRecordsReader::getRecords()
 {
-	vector <string > myRecords;
+vector<	vector <string > > myRecords;
 
 	 if (myStream) {
                 std::string s;
                 while (getline(myStream, s))
-                      myRecords.push_back(s);
+			{
+                      myRecords.push_back(getRecord(s));
+}
         }
 
 	return myRecords;	
 }
-
+vector< string> FileRecordsReader::getRecord(const  string& myRecord)
+{
+	vector <string > record;
+	record.push_back(myRecord);
+	return record;	
+}

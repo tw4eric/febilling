@@ -18,9 +18,9 @@ TEST( FileReaderConstructor , isGetRecordsWorking ){
 	sampleVector.push_back(string("teja1"));
 	sampleVector.push_back(string("teja2"));
 */	
-	 vector <string > recVector = myFileReader.getRecords();
+	vector< vector <string > > recVector = myFileReader.getRecords();
           
-	ASSERT_STREQ(recVector[0].c_str() , string("teja").c_str());
+	ASSERT_STREQ((recVector[0])[0].c_str() , string("teja").c_str());
 
 	
 	

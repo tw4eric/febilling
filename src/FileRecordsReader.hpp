@@ -7,8 +7,8 @@ class FileRecordsReader : public RecordsReader
 {
 	public:
 		FileRecordsReader( string fileName , int numOfCol ) throw( exception ) ;
-		virtual vector<string> getRecords() ;
-		virtual bool getRecord() {return false;}
+		virtual vector < vector<string> > getRecords() ;
+		virtual vector< string > getRecord( const string& myRecord); 
 		virtual ~FileRecordsReader();
 	private:
 		ifstream myStream;

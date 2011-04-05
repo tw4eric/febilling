@@ -4,14 +4,15 @@
 #define _RECORD_READER_
 
 #include <vector>
+#include <string>
 #include "RawRecord.h"
 class RecordsReader {
 	public:
 		RecordsReader(){}
 		virtual ~RecordsReader() {}
-		virtual vector<string> getRecords() = 0;	
+		virtual vector < vector<string > > getRecords() = 0;	
 	protected:
-		virtual  bool getRecord()=0;
+		virtual  vector<string >  getRecord(const string & myRecord )=0;
 }
 ;
 #endif 
