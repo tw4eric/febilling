@@ -9,7 +9,7 @@ class RecordsReader {
 	public:
 		RecordsReader(){}
 		virtual ~RecordsReader() {}
-		virtual vector<RawRecord> getRecords() = 0;	
+		virtual vector<string> getRecords() = 0;	
 	protected:
 		virtual  bool getRecord()=0;
 }
