@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.6)
 ENABLE_TESTING()
-set(PROJ_NAME "gtestdemo")
+set(PROJ_NAME "febilling")
 project(${PROJ_NAME} CXX)
 
 find_package(Boost REQUIRED)
