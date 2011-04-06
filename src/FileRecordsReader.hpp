@@ -1,5 +1,5 @@
-#ifndef _FILE_RECORDS_READER_
-#define _FILE_RECORDS_READER_
+#ifndef _FILERECORDSREADER_HPP_
+#define _FILERECORDSREADER_HPP_
 #include "RecordsReader.hpp"
 #include <exception>
 #include <fstream>
@@ -19,4 +19,4 @@ class FileRecordsReader : public RecordsReader
 
 	
 };
-#endif
+#endif // _FILERECORDSREADER_HPP_

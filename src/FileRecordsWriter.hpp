@@ -1,9 +1,9 @@
-#ifndef _FILERECORDSWRITER_H_
-#define _FILERECORDSWRITER_H_
+#ifndef _FILERECORDSWRITER_HPP_
+#define _FILERECORDSWRITER_HPP_
 
 //JOB : Write recordsCollection to a file
 
-#include"RecordsWriter.hh"
+#include"RecordsWriter.hpp"
 
 #include<string>
 #include<vector>
@@ -18,4 +18,4 @@ class FileRecordsWriter : public RecordsWriter
 		std::string myFileToCreate;		
 };
 
-#endif // _FILERECORDSWRITER_H_
+#endif // _FILERECORDSWRITER_HPP_

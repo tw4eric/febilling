@@ -22,3 +22,5 @@ test/gmon.out
 coverage/
 test/*test
 test/*Test
+gmon.out
+*.swp

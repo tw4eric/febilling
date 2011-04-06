@@ -4,7 +4,7 @@
 #include <string>
 #include <vector>
 
-#include "RawRecord.h"
+#include "RawRecord.hpp"
 
 using namespace std;
 

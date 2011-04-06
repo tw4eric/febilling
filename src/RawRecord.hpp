@@ -1,5 +1,5 @@
-#ifndef _RAW_RECORD_
-#define _RAW_RECORD_
+#ifndef _RAWRECORD_HPP_
+#define _RAWRECORD_HPP_
 
 #include <string>
 
@@ -19,5 +19,5 @@ typedef struct RawRecord
                         phoneNum(phoneNum), callID(callID), startTime(startTime), endTime(endTime) {
                 }
 } RawRecord;
-#endif
 
+#endif // _RAWRECORD_HPP_
