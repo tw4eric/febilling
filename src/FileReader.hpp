@@ -1,5 +1,6 @@
 #ifndef _FILEREADER_HPP_
 #define _FILEREADER_HPP_
+#include <string>
 
 class FileReader {
     private:

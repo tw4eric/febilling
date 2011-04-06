@@ -9,9 +9,9 @@ RatePlanLookup::RatePlanLookup(FileReader *fileReader)
     }
 }
 
-float RatePlanLookup::LookupRatePlan(long aPhoneNumber ,string aCallId)
+float RatePlanLookup::LookupRatePlan(long aPhoneNumber, string aCallId)
 {
-	RatePlan theRatePlan = getRatePlan(aPhoneNumber,aCallId);
+	RatePlan theRatePlan = getRatePlan(aPhoneNumber, aCallId);
 	return theRatePlan.getPrice(); 
 }
 
@@ -25,4 +25,3 @@ RatePlan RatePlanLookup::getRatePlan(long aPhoneNumber , string aCallId)
 	
 	return RatePlan(7.0);
 }
-

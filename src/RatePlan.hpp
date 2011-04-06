@@ -5,22 +5,18 @@
 class RatePlan
 {
     private: 
-        float myRatePersec;
+        float aRatePerSecond;
+        RatePlan() {}
 
     public :
-        RatePlan()
+        RatePlan(float ratePerSecond)
         {
-            myRatePersec = 10.0;
+            aRatePerSecond = ratePerSecond;
         }
 
-        RatePlan(float aPrice)
+        virtual float getPrice()
         {
-            myRatePersec = aPrice;
-        }
-
-        float getPrice()
-        {
-            return myRatePersec;
+            return aRatePerSecond;
         }
 
 };
