@@ -12,7 +12,7 @@ FileRecordsWriter::FileRecordsWriter(string fileName) throw(string)
 {	
 	myFileToCreate = fileName;
 	ofstream myfile;	
-	myfile.open (myFileToCreate.c_str(), ios::out);
+	myfile.open (myFileToCreate.c_str(), ios::out | ios::app);
 	if(myfile.is_open())
 	{
 		myfile.close();
@@ -31,10 +31,11 @@ bool FileRecordsWriter::WriteRecords(vector< vector< string> > recordCollection)
 	string str;	
 	if(myfile.is_open())
 	{
-		cout<<"File is opened"<<endl;
+		
+		//cout<<"File is opened"<<endl;
 		for(int ii = 0; ii < recordCollection.size(); ii++)
 		{
-			str = "";
+			str.clear();
 			for(int jj = 0; jj < recordCollection.size(); jj++)
 			{
 				str += recordCollection[ii][jj];
@@ -52,5 +53,5 @@ bool FileRecordsWriter::WriteRecords(vector< vector< string> > recordCollection)
 	else
 	{	
 		return false;
-	}
+	}	
 }
