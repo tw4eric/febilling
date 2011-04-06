@@ -14,13 +14,13 @@ TEST(FileRecordsWriter, fileProvidedIsNotValid) {
 
 TEST(FileRecordsWriter, fileProvidedIsValid) {
 	
-	EXPECT_NO_THROW({FileRecordsWriter recordWriter = FileRecordsWriter(string("MakeFile"));});	 
+	EXPECT_NO_THROW({FileRecordsWriter recordWriter = FileRecordsWriter(string("Makefile"));});	 
 	//delete recordWriter;
 };
 
 TEST(FileRecordsWriter, dataWrittenToFile4line) {
 	
-	FileRecordsWriter recordWriter = FileRecordsWriter(string("testData/test.txt"));
+	FileRecordsWriter recordWriter = FileRecordsWriter(string("../testData/test.txt"));
 	vector<string> str1;
 	str1.push_back("callId1");
 	str1.push_back("phone");

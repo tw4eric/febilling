@@ -2,22 +2,13 @@
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
 #include <RatePlanLookup.h>
-#include <FileReader.hpp>
+#include "FileReaderMock.hpp"
 
 using ::testing::Return;
 using ::testing::Expectation;
 using ::testing::Exactly;
 using ::testing::InSequence;
 
-class FileReaderMock : public FileReader {
-    public:
-        FileReaderMock(std::string filepath):FileReader(filepath) {}
-        ~FileReaderMock() {}
-
-    public:
-        MOCK_METHOD0(getLine, std::string());
-        MOCK_METHOD0(isGood, bool());
-};
 
 TEST(RatePlanLookup, ReadsDataFromFile) {
     FileReaderMock fileReader("dummydata.txt");
