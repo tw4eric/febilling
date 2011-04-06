@@ -9,15 +9,14 @@ using ::testing::Expectation;
 using ::testing::Exactly;
 using ::testing::InSequence;
 
-
 TEST(RatePlanLookup, ReadsDataFromFile) {
     FileReaderMock fileReader("dummydata.txt");
     InSequence s;
     for (int i = 0; i < 10; i++) {
         EXPECT_CALL(fileReader, isGood())
-            .WillOnce(Return(true)).RetiresOnSaturation();
+            .WillOnce(Return(true));
         EXPECT_CALL(fileReader, getLine())
-            .WillOnce(Return(std::string("some line"))).RetiresOnSaturation();
+            .WillOnce(Return(std::string("some line")));
     }
     EXPECT_CALL(fileReader, isGood())
         .Times(1).WillOnce(Return(false));
