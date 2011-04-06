@@ -1,7 +1,7 @@
 #ifndef _RATEPLANLOOKUP_HPP_
 #define _RATEPLANLOOKUP_HPP_
 #include <iostream>
-#include <RatePlan.h>
+#include <RatePlan.hpp>
 #include <FileReader.hpp>
 #include <string>
 #include <tr1/unordered_map>

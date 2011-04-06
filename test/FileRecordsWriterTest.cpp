@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
-#include <FileRecordsWriter.hh>
-#include <RecordsWriter.hh>
+#include <FileRecordsWriter.hpp>
+#include <RecordsWriter.hpp>
 
 #include<string>
 #include<vector>

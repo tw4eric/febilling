@@ -1,7 +1,7 @@
 #include <iostream>
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
-#include <RatePlanLookup.h>
+#include <RatePlanLookup.hpp>
 #include "FileReaderMock.hpp"
 
 using ::testing::Return;

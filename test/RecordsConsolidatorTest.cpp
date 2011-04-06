@@ -2,8 +2,8 @@
 #include <iostream>
 #include <vector>
 
-#include "RecordsConsolidator.cc"
-#include "RawRecord.h"
+#include "RecordsConsolidator.hpp"
+#include "RawRecord.hpp"
 
 using namespace std;
 

@@ -1,5 +1,5 @@
-#ifndef _RATEPLAN_H_
-#define _RATEPLAN_H_
+#ifndef _RATEPLAN_HPP_
+#define _RATEPLAN_HPP_
 #include <iostream>
 
 class RatePlan
@@ -24,4 +24,4 @@ class RatePlan
         }
 
 };
-#endif // _RATEPLAN_H_
+#endif // _RATEPLAN_HPP_

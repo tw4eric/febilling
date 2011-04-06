@@ -1,5 +1,5 @@
-#ifndef _PROCESSED_RECORD_
-#define _PROCESSED_RECORD_
+#ifndef _PROCESSEDRECORD_HPP_
+#define _PROCESSEDRECORD_HPP_
 #include <string>
 
 struct ProcessedRecord{
@@ -14,4 +14,4 @@ struct ProcessedRecord{
 		}
 };
 
-#endif // _PROCESSED_RECORD_
+#endif // _PROCESSEDRECORD_HPP_
